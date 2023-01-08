@@ -1,0 +1,92 @@
+.list-item-wrapper{
+    width: 100%;
+    height:16vh;
+}
+
+.browser-navbar .list-item-wrapper{
+    height:100px;
+}
+
+.list-item{
+    height: 100%;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display:flex;
+
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.list-item-img{
+    right: 0px;
+    height: 100%;
+    filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.2));
+    margin-left: 10px;
+}
+
+.list-item-title-number-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    top:0;
+    bottom:0
+}
+
+.list-item-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.1vh;
+    letter-spacing: 0.374px;
+    margin: 0px;
+    color: #000000;
+}
+
+.browser-navbar .list-item-title{
+    font-size: 20px;
+}
+
+.list-item-title::first-letter{
+    text-transform: uppercase;
+}
+
+.list-item-number{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.6vh;
+    margin:0;
+    letter-spacing: 0.374px;
+    color: #919698;
+}
+
+.browser-navbar .list-item-number{
+    font-size: 15px;
+}
+
+.list-item-types-wrapper{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.list-item-type{
+    inline-size: min-content;
+    margin-right: 15px;
+    margin-top:5px;
+    margin-bottom: 5px;
+    background-color: rgb(162,193,87);
+    border-radius: 10px;
+    color: white;
+    padding: 4px;
+    font-size: 2.4vh;   
+}
+
+.browser-navbar .list-item-type{
+    font-size: 18px;
+}

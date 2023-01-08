@@ -1,0 +1,73 @@
+.navbar-wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+
+.navbar-title-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-wrapper h1{
+    width: 90%;
+    margin: 0;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-btn-sort-on{
+    background: none;
+    border: none;
+    justify-self: flex-end;
+    padding-right: 15px;
+}
+
+.navbar-search-form{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-search-form-input{
+    background: #EFF0F1;
+    border-radius: 10px;
+    width: 90%;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.navbar-btn-team-fav-wrapper{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px; 
+}
+
+.navbar-btn-my-team{
+    background: linear-gradient(109.73deg, #46469C 0%, #7E32E0 100%);
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 18px;
+    width: 45%;
+    height: 60px;
+    border: none;
+    margin-right: 5px;
+}
+
+.navbar-btn-favorites{
+    background: linear-gradient(109.73deg, #65CB9A 0%, #15D0DC 100%);
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 18px;
+    width: 45%;
+    height: 60px;
+    border: none;
+    margin-left: 5px
+}
+
+.list-wrapper{
+    overflow: auto;
+    flex: 1;
+}
