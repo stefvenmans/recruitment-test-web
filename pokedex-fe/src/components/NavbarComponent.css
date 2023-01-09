@@ -25,6 +25,43 @@
     padding-right: 15px;
 }
 
+.navbar-dialog-sort-on{
+    display: flex;
+    flex-direction: column; 
+    background: rgba(179, 179, 179, 0.169)
+}
+
+.navbar-dialog-sort-on-btn{
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 10px;
+}
+
+.navbar-dialog-sort-on-btn-close{
+    background: none;
+    border: none;
+    align-self: flex-end;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.navbar-dialog-sort-on-btn-apply{
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background: black;
+}
+
 .navbar-search-form{
     display: flex;
     justify-content: center;
@@ -70,4 +107,28 @@
 .list-wrapper{
     overflow: auto;
     flex: 1;
+}
+
+.navbar-my-team-wrapper{
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109.73deg, #46469C 0%, #7E32E0 100%);
+}
+
+.navbar-fav-wrapper{
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109.73deg, #65CB9A 0%, #15D0DC 100%);
+}
+
+.navbar-fav-wrapper h1{
+    color: white;
+}
+
+.navbar-my-team-wrapper h1{
+    color: white;
 }
