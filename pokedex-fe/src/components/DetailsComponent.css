@@ -1,0 +1,15 @@
+.details-wrapper{
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.details-title{
+    padding: 15px;
+    color: white;
+    margin: 0;
+}
+
+.details-title::first-letter{
+    text-transform: uppercase;
+}
