@@ -9,6 +9,7 @@ import './NavbarComponent.css'
 import {ReactComponent as IconSortOn} from '../assets/icon-sort-on.svg'
 import {ReactComponent as IconClose} from '../assets/icon-close.svg'
 import {ReactComponent as IconGoBack} from '../assets/icon-chevron-left.svg'
+import { useCollection } from '../hooks/useCollection'
 
 export const NavbarComponent = () => {
 
@@ -20,6 +21,9 @@ export const NavbarComponent = () => {
     const [showMyTeamOrFav, setShowMyTeamOrFav] = useState(0)
     const [myTeam, setMyTeam] = useState(null)
     const [favorites, setFavorites] = useState(null)
+
+    const {documents: favoritesFirebase, error: firebase_error_fav, setQuery_fav} = useCollection("favorites", null ,['pokemon_id', 'asc'])//, ['pokemon_id', 'asc'])
+    const {documents: myTeamFirebase, error: firebase_erro_my_team, setQuery_my_team} = useCollection("my_team", null ,['pokemon_id', 'asc'])//, ['pokemon_id', 'asc'])
     
     const url_pokemon_general = "https://stoplight.io/mocks/appwise-be/pokemon/57519009/pokemon"
     const {error, isPending, data} = useFetch(url_pokemon_general)
@@ -110,7 +114,31 @@ export const NavbarComponent = () => {
         }
         setShowDialogSortOn(false)
         setDataPokemonGeneral(sortedData)
-      }
+    }
+
+    const readMyTeamtFromFirebase = () => {
+        // setMyTeam(true)
+        if(data && myTeamFirebase){
+          let findMyTeam = []
+          myTeamFirebase.map(item => {
+            findMyTeam.push(data.find((it) => {if(it.id == item.pokemon_id){return it}}))
+          }
+          )
+          setMyTeam(findMyTeam)
+        }
+    }
+
+    const readFavoritesFromFirebase = () => {
+        // setFavo(true)
+        if(data && favoritesFirebase){
+          let findFavorites = []
+          favoritesFirebase.map(item => {
+            findFavorites.push(data.find((it) => {if(it.id == item.pokemon_id){return it}}))
+          }
+          )
+          setFavorites(findFavorites)
+        }
+    }
 
     return (
         <div className='navbar-wrapper'>
@@ -132,8 +160,16 @@ export const NavbarComponent = () => {
                         </input>
                     </form>
                     <div className='navbar-btn-team-fav-wrapper'>
-                        <button className='navbar-btn-my-team' onClick={() => setShowMyTeamOrFav(1)}>Mijn team</button>
-                        <button className='navbar-btn-favorites' onClick={() => setShowMyTeamOrFav(2)}>Favorieten</button>
+                        <button className='navbar-btn-my-team' 
+                            onClick={() => {
+                                readMyTeamtFromFirebase()
+                                setShowMyTeamOrFav(1)
+                            }}>Mijn team</button>
+                        <button className='navbar-btn-favorites' 
+                            onClick={() => {
+                                readFavoritesFromFirebase()
+                                setShowMyTeamOrFav(2)
+                            }}>Favorieten</button>
                     </div>
                     <div className='list-wrapper'>
                         <ListComponent data={dataPokemonGeneral}/>

@@ -21,3 +21,23 @@
 .mobile-details .details-img{
     width:90vw;
 }
+
+.details-favorite-btn{
+    /* height: 100%; */
+    border: none;
+    background: none;
+}
+
+.mobile-details .details-favorite-btn{
+    /* justify-self: flex-end; */
+    /* flex: auto; */
+    /* width: 90%; */
+    margin-left: auto;
+    padding-top: 8px;
+}
+
+.details-mobile-header{
+    display: flex;
+    flex-direction: collum;
+    width: 100%;
+}
