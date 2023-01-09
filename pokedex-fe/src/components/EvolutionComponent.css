@@ -1,0 +1,20 @@
+.evolution-wrapper{
+    /* height: 100%; */
+    /* flex: 1; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding: 25px;
+}
+
+.evolution-content-wrapper{
+    background: none;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.evolution-wrapper .list-item{
+    /* margin: 0; */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+}

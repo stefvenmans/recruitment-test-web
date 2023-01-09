@@ -9,6 +9,7 @@ import {ReactComponent as IconGoBack} from '../assets/icon-chevron-left.svg'
 import './DetailsComponent.css'
 import { InfoComponent } from './InfoComponent'
 import { StatisticsComponent } from './StatisticsComponent'
+import { EvolutionComponent } from './EvolutionComponent'
 
 export const DetailsComponent = (props) => {
     const {id} = useParams()
@@ -42,6 +43,7 @@ export const DetailsComponent = (props) => {
                     />
                     <InfoComponent data_pokemon={data_pokemon} data_pokemon_species={data_pokemon_species}/>
                     <StatisticsComponent data_pokemon={data_pokemon} data_pokemon_species={data_pokemon_species}/>
+                    <EvolutionComponent data_pokemon_evolution_chain={data_pokemon_evolution_chain} data_pokemon_general={data_pokemon_general}/>
                 </>
             )}
         </div>

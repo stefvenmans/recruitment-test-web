@@ -7,6 +7,10 @@
     height:100px;
 }
 
+.browser-details .list-item-wrapper{
+    height:100px;
+}
+
 .list-item{
     height: 100%;
     margin-top: 15px;
@@ -46,6 +50,14 @@
     color: #000000;
 }
 
+.browser-details .list-item-title{
+    font-size: 22px;
+}
+
+.browser-navbar .list-item-title{
+    font-size: 22px;
+}
+
 .browser-navbar .list-item-title{
     font-size: 20px;
 }
@@ -61,6 +73,14 @@
     margin:0;
     letter-spacing: 0.374px;
     color: #919698;
+}
+
+.browser-details .list-item-number{
+    font-size: 18px;
+}
+
+.browser-navbar .list-item-number{
+    font-size: 18px;
 }
 
 .browser-navbar .list-item-number{
