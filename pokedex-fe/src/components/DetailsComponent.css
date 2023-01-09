@@ -13,3 +13,11 @@
 .details-title::first-letter{
     text-transform: uppercase;
 }
+
+.details-img{
+    filter: drop-shadow(15px 15px 5px rgb(0 0 0 / 0.4)); 
+}
+
+.mobile-details .details-img{
+    width:90vw;
+}

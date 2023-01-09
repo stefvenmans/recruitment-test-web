@@ -8,6 +8,7 @@ import {ReactComponent as IconGoBack} from '../assets/icon-chevron-left.svg'
 //style
 import './DetailsComponent.css'
 import { InfoComponent } from './InfoComponent'
+import { StatisticsComponent } from './StatisticsComponent'
 
 export const DetailsComponent = (props) => {
     const {id} = useParams()
@@ -35,12 +36,12 @@ export const DetailsComponent = (props) => {
             {data_pokemon && url_pokemon_species && data_pokemon_evolution_chain && (
                 <>
                     <h1 className={"details-title"}>{data_pokemon.name}</h1>
-                    <img 
-                        style={{filter: "drop-shadow(15px 15px 5px rgb(0 0 0 / 0.4))", width:'90vw'}}
+                    <img className='details-img'
                         src={data_pokemon["sprites"]["other"]["official-artwork"]["front_default"]}
                         alt={data_pokemon.name}
                     />
                     <InfoComponent data_pokemon={data_pokemon} data_pokemon_species={data_pokemon_species}/>
+                    <StatisticsComponent data_pokemon={data_pokemon} data_pokemon_species={data_pokemon_species}/>
                 </>
             )}
         </div>

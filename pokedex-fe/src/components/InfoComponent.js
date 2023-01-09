@@ -30,10 +30,10 @@ export const InfoComponent = (props) => {
                 <span>Hoogte</span>
                 <p>{props.data_pokemon["height"]}m</p>
             </div>
-            <div className='info-element-wrapper'>
+            {/* <div className='info-element-wrapper'>
                 <span>Categorie</span>
                 <p>Todo</p>
-            </div>
+            </div> */}
             <div className='info-element-wrapper'>
                 <span>Geslacht</span>
                 <p>{props.data_pokemon_species["has_gender_differences"] ? "true" : "false"} </p>

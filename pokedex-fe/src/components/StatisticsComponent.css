@@ -1,0 +1,43 @@
+.stats-wrapper{
+    /* height: 100%; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.stats-content-wrapper{
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.stats-element-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.stats-element-wrapper span{
+    width: 50%;
+    color: grey;
+    margin-top: 12px;
+}
+
+.mobile-details .stats-element-wrapper span{
+    font-size: 2.5vh;
+}
+
+.stats-element-wrapper p{
+    color: rgb(0, 0, 0);
+    margin: 0;
+    margin-top: 12px; 
+}
+
+.stats-element-wrapper p,span::first-letter{
+    text-transform: uppercase;
+}
+
+.mobile-details .stats-element-wrapper p{
+    font-size: 2.5vh;
+}
