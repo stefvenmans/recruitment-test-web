@@ -107,6 +107,9 @@ export const DetailsComponent = (props) => {
                             <button className='details-favorite-btn' onClick={setFavoriteUnfavorite}>{favorite ? (<IconFavoriteFull/>) : (<IconFavorite/>)}</button>
                         </div>
                     )}
+                    {props.view=="mobile" && (
+                        <h1 className={"details-title"}>{data_pokemon.name}</h1>
+                    )}
                     <div className='details-content-wrapper'>
                         <div className='details-col1-wrapper'>
                             <img className='details-img'
