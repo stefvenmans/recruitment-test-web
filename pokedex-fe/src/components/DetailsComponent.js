@@ -91,7 +91,7 @@ export const DetailsComponent = (props) => {
     return (
         <div className='details-wrapper' style={{background: data_pokemon_species ? pokemonColors[ data_pokemon_species.color.name] : 'rgb(255,255,255'}}>
             {props.view=="mobile" && (
-                <div className='details-mobile-header'>
+                <div className='details-header'>
                     <Link className='btn-go-back-wrapper' to='/'>
                         <IconGoBack/>
                         <h3>Terug</h3>
@@ -101,15 +101,27 @@ export const DetailsComponent = (props) => {
             )}
             {data_pokemon && url_pokemon_species && data_pokemon_evolution_chain && (
                 <>
-                    {/* <button onClick={setOnMyTeamRemoveFromMyTeam}>{myTeam ? "Remove from my team" : "Add to my team"}</button> */}
-                    <h1 className={"details-title"}>{data_pokemon.name}</h1>
-                    <img className='details-img'
-                        src={data_pokemon["sprites"]["other"]["official-artwork"]["front_default"]}
-                        alt={data_pokemon.name}
-                    />
-                    <InfoComponent data_pokemon={data_pokemon} data_pokemon_species={data_pokemon_species}/>
-                    <StatisticsComponent data_pokemon={data_pokemon} data_pokemon_species={data_pokemon_species}/>
-                    <EvolutionComponent data_pokemon_evolution_chain={data_pokemon_evolution_chain} data_pokemon_general={data_pokemon_general}/>
+                    {props.view=="browser" && (
+                        <div className='details-header'>
+                            <h1 className={"details-title"}>{data_pokemon.name}</h1>
+                            <button className='details-favorite-btn' onClick={setFavoriteUnfavorite}>{favorite ? (<IconFavoriteFull/>) : (<IconFavorite/>)}</button>
+                        </div>
+                    )}
+                    <div className='details-content-wrapper'>
+                        <div className='details-col1-wrapper'>
+                            <img className='details-img'
+                                src={data_pokemon["sprites"]["other"]["official-artwork"]["front_default"]}
+                                alt={data_pokemon.name}
+                            />
+                            
+                                <InfoComponent data_pokemon={data_pokemon} data_pokemon_species={data_pokemon_species}/>
+                        </div>
+                        <div className='details-col2-wrapper'>
+                            <StatisticsComponent data_pokemon={data_pokemon} data_pokemon_species={data_pokemon_species}/>
+                            <EvolutionComponent data_pokemon_evolution_chain={data_pokemon_evolution_chain} data_pokemon_general={data_pokemon_general}/>
+                        </div>
+                    </div>
+                    <button className='details-my-team-btn' onClick={setOnMyTeamRemoveFromMyTeam}>{myTeam ? ('Verwijder van team') : ('Toevoegen aan team')}</button>
                 </>
             )}
         </div>
